@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="weatherTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CityName" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ao-Sn-FLQ">
+                                <rect key="frame" x="133.5" y="54" width="108" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0º" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aiv-Ei-ie1">
+                                <rect key="frame" x="159" y="111" width="57" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="57" id="8dy-94-apO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="opL-DO-K4Y">
+                                <rect key="frame" x="0.0" y="237" width="375" height="430"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="h2w-hW-7Vg">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="h2w-hW-7Vg" id="fOX-zn-6UF">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="I2s-CD-3dR"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="lER-6z-9y0"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="weatherType" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BzQ-Rb-frk">
+                                <rect key="frame" x="119" y="170" width="137" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="137" id="YqG-5D-hes"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="opL-DO-K4Y" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="M6d-Rp-pIF"/>
+                            <constraint firstItem="BzQ-Rb-frk" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="O2g-6e-bZ0"/>
+                            <constraint firstItem="aiv-Ei-ie1" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="aWb-KV-Vec"/>
+                            <constraint firstItem="BzQ-Rb-frk" firstAttribute="top" secondItem="aiv-Ei-ie1" secondAttribute="bottom" constant="23" id="iX2-zb-POd"/>
+                            <constraint firstItem="4Ao-Sn-FLQ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="nmp-LS-qxM"/>
+                            <constraint firstItem="opL-DO-K4Y" firstAttribute="top" secondItem="BzQ-Rb-frk" secondAttribute="bottom" constant="37" id="qfb-Wc-MKt"/>
+                            <constraint firstItem="4Ao-Sn-FLQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="54" id="vGX-Jf-2ft"/>
+                            <constraint firstItem="aiv-Ei-ie1" firstAttribute="top" secondItem="4Ao-Sn-FLQ" secondAttribute="bottom" constant="27" id="wi3-vJ-OHs"/>
+                            <constraint firstItem="opL-DO-K4Y" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="yve-dK-UT0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="opL-DO-K4Y" secondAttribute="bottom" id="z8G-eW-pS9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="cityNameLabel" destination="4Ao-Sn-FLQ" id="0Mf-p4-HMk"/>
+                        <outlet property="currentTemp" destination="aiv-Ei-ie1" id="Hr2-qT-7Gs"/>
+                        <outlet property="tableView" destination="opL-DO-K4Y" id="Gbo-3y-ZpJ"/>
+                        <outlet property="weatherDescription" destination="BzQ-Rb-frk" id="TSG-OI-bBb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138.40000000000001" y="112.89355322338831"/>
+        </scene>
+    </scenes>
+</document>
