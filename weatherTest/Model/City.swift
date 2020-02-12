@@ -30,5 +30,5 @@ struct City {
         self.sunset = Date(timeIntervalSince1970: Double(tmpSet!)).description
         self.timezone = city["timezone"] as? Int        
     }
-    
+     
 }
